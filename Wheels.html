@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>About Cleaning Robot</title>
+		<title>Mechatronics Project - Sponge System</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -27,11 +27,11 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
-	<body class="no-sidebar">
+	<body class="left-sidebar">
 	
 		<!-- Header -->
 			<header id="header">
-				<h1 id="logo"><a href="index.html">Mechatronics Project <span>by Bruface</span></a></h1>
+				<h1 id="logo"><a href="index.html">Mechatronics Project  <span> by Bruface</span></a></h1>
 				<nav id="nav">
 					<ul>
 						<li class="current"><a href="index.html">Welcome</a></li>
@@ -57,7 +57,6 @@
 								</li>
 							</ul>
 						</li>
-						<!--<li><a href="#" class="button special">Sign Up</a></li>-->
 					</ul>
 				</nav>
 			</header>
@@ -66,27 +65,67 @@
 			<article id="main">
 
 				<header class="special container">
-					<span class="icon fa-cogs"></span>
-					<h2><strong>ABOUT</strong> the cleaning robot</h2>
-					<p>This amazing robot removes the crumble of the table and clean up your table with sponge.</p>
+					<span class="icon fa-cube"></span>
+					<h2><strong>Sponge System</strong> </h2>
+					<p>Simple and efficient.</p>
 				</header>
 					
 				<!-- One -->
 					<section class="wrapper style4 container">
 					
-						<!-- Content -->
-							<div class="content">
-								<section>
-									<a href="#" class="image featured"><img src="images/1.png" alt="Cleaning Robot Design" /></a>
-									<header>
-										<h3>Nikita, the Cleaning Robot</h3>
-									</header>
-									<p>This robot is the product of five brilliant engineering students. It has been built in the framework of the mechatronics course for the first master year students. The goal of this course is to learn how to realize a robot from the conceptual design to the real world.</p>
-									<p>We choose to built a cleaning robot for different reasons. First, this project touchs at a lot of robotics concept. The first one is the displacement on the table. Indeed, we need wheels to move, it requires motors and a perfect regulation to have a robot moving straight forward. Then, the robot is multitask. We have to find a perfect structure to assembly the whole robot and fit everything perfectly. The last very interesting part is the edge detection thanks to IR sensors.</p>
-									<p>In this website, we wanted to </p>
-								</section>
-							</div>
+						<div class="row oneandhalf">
+							<div class="4u">
+								
+								<!-- Sidebar -->
+									<div class="sidebar">
 
+										<section>
+											<a href="#" class="image featured"><img src="images/SpongeMotor.jpg" alt="" /></a>
+											<header>
+												<h3>Motor</h3>
+											</header>
+											<p>In order to make turn on it self the round sponge, a basic 2 pins - DC motor is used. As the turning speed is constant, there's no need for a more sophisticate motor.</p>
+											<footer>
+												<ul class="buttons">
+													<li><a href="http://befr.rs-online.com/web/p/dc-geared-motors/2456089/?searchTerm=245+6089&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B337D5B5C732D2F255C2E2C5D5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D323435203630383926" class="button smaal">About the Motor</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+
+							</div>
+							<div class="8u skel-cell-important">
+								
+								<!-- Content -->
+									<div class="content">
+										<section>
+											<header>
+												<h3>What function does it fulfill ?</h3>
+											</header>
+
+											<p> Rambo Robot takes off the crumbles of the table but it's not enough to have a clean table.
+											Therefore, Rambo Robot can also clean with a wet sponge by making it turning on itself in the same direction at a constant speed. The choice of making it turning instead of linear movement is supported by first, the fact that it cleans better than with linear movement as there is no direction of cleaning and second, as a motor already has a circular movement, it is easier and cheaper ton implement. </p>
+
+											<a href="#" class="image featured"><img src="images/SpongeSystem.png" alt="" /></a>
+											<header>
+												<h3>How does it works?</h3>
+											</header>
+											
+											<p>  At the back of the robot, a sponge system is installed. It consists of a DC motor connected by a shaft to a round cylinder support (the green and grey part on the figure above) for the sponge to fit in (the sponge is not drawed on the figure though one can easily imagine it at the bottom sticked in the grey support). </p>
+											
+											<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+											<header>
+												<h3>PCB </h3>
+											</header>
+											<p> The PCB part of the DC motor is shown on the figure above. <p>
+
+											It is drived by only 2 wires. One power supply (1.5V - 3V) and one PWM input to control the speed of the rotating sponge.
+
+										</section>
+									</div>
+	
+							</div>
+						</div>					
 					</section>
 
 				<!-- Two -->

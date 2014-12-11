@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>About Cleaning Robot</title>
+		<title>Mechatronics Project - Brush Crumbles</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -27,11 +27,11 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 	</head>
-	<body class="no-sidebar">
+	<body class="left-sidebar">
 	
 		<!-- Header -->
 			<header id="header">
-				<h1 id="logo"><a href="index.html">Mechatronics Project <span>by Bruface</span></a></h1>
+				<h1 id="logo"><a href="index.html">Mechatronics Project  <span> by Bruface</span></a></h1>
 				<nav id="nav">
 					<ul>
 						<li class="current"><a href="index.html">Welcome</a></li>
@@ -57,7 +57,6 @@
 								</li>
 							</ul>
 						</li>
-						<!--<li><a href="#" class="button special">Sign Up</a></li>-->
 					</ul>
 				</nav>
 			</header>
@@ -66,27 +65,87 @@
 			<article id="main">
 
 				<header class="special container">
-					<span class="icon fa-cogs"></span>
-					<h2><strong>ABOUT</strong> the cleaning robot</h2>
-					<p>This amazing robot removes the crumble of the table and clean up your table with sponge.</p>
+					<span class="icon fa-trash"></span>
+					<h2><strong>Brush the Crumbles!</strong> </h2>
+					<p>Rambo Robot eats everything's on its way.</p>
 				</header>
 					
 				<!-- One -->
 					<section class="wrapper style4 container">
 					
-						<!-- Content -->
-							<div class="content">
-								<section>
-									<a href="#" class="image featured"><img src="images/1.png" alt="Cleaning Robot Design" /></a>
-									<header>
-										<h3>Nikita, the Cleaning Robot</h3>
-									</header>
-									<p>This robot is the product of five brilliant engineering students. It has been built in the framework of the mechatronics course for the first master year students. The goal of this course is to learn how to realize a robot from the conceptual design to the real world.</p>
-									<p>We choose to built a cleaning robot for different reasons. First, this project touchs at a lot of robotics concept. The first one is the displacement on the table. Indeed, we need wheels to move, it requires motors and a perfect regulation to have a robot moving straight forward. Then, the robot is multitask. We have to find a perfect structure to assembly the whole robot and fit everything perfectly. The last very interesting part is the edge detection thanks to IR sensors.</p>
-									<p>In this website, we wanted to </p>
-								</section>
-							</div>
+						<div class="row oneandhalf">
+							<div class="4u">
+								
+								<!-- Sidebar -->
+									<div class="sidebar">
 
+										<section>
+											<a href="#" class="image featured"><img src="images/SpongeMotor.jpeg" alt="" /></a>
+											<header>
+												<h3>Motor</h3>
+											</header>
+											<p>The constrain for this part was that the motor had to be as small as possible. Therefore a brushless DC motor is used to make the brush rotate. However,in order to control a brushless motor, one needs more than a PWM. It needs a small control unit to proceed to the commutation.</p>
+											<footer>
+												<ul class="buttons">
+													<li><a href="http://benl.rs-online.com/web/p/dc-motors/2389709/?searchTerm=238-9709&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B337D5B5C732D2F255C2E2C5D5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D3233382D3937303926" class="button small">About the Motor</a></li>
+												</ul>
+											</footer>
+										</section>
+
+										<section>
+											<a href="#" class="image featured"><img src="images/SpongeMotor.jpeg" alt="" /></a>
+											<header>
+												<h3>Controller</h3>
+											</header>
+											<p>?????????</p>
+											<footer>
+												<ul class="buttons">
+													<li><a href="http://benl.rs-online.com/web/p/dc-motors/2389709/?searchTerm=238-9709&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B337D5B5C732D2F255C2E2C5D5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D3233382D3937303926" class="button small">About the Controller</a></li>
+												</ul>
+											</footer>
+										</section>
+									</div>
+
+							</div>
+							<div class="8u skel-cell-important">
+								
+								<!-- Content -->
+									<div class="content">
+										<section>
+											<header>
+												<h3>What function does it fulfill ?</h3>
+											</header>
+
+											<p> Rambo Robot takes off the crumbles of the table because Rambo Robot loves the crumbles.
+										 </p>
+
+											<a href="#" class="image featured"><img src="images/BrushSystem.png" alt="" /></a>
+											<header>
+												<h3>How does it works?</h3>
+											</header>
+											
+											<p>  As shown on the figure above, at the front of the robot, a thin brushless DC motor is fixed to the left side wall. A shaft connector is fixed to the motor shaft. A brush has its shaft insert into the connector and into a hole on the other side wall. The height of the system relatively to the ground table is measured for the brush's hairs to have enough pressure on the ground to take of the crumbles but not too much so that the brush doesn't break too fast. Where do the crumbles go then ? The stomach of the Rambo Robot (which is designed to be taken off and emptied very easily) is just behind the brush. It consists of a plexiglass dirtbag.</p>
+											<p> The Brushless motor is driven by controller because the commutation is not automatic for these kind of DC motor.</p>
+											
+											<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+											<header>
+												<h3>PCB </h3>
+											</header>
+											<p> The PCB part of the brushless motor and its controller is shown on the figure above. <p>
+
+											The motor is connected with 3 wires to the controller:
+											<li> Power Supply </li> <li> Control wire </li> <li> Ground</li> 
+
+											The controller must be power supplied by an external battery.
+
+											The controller is connected with the arduino by 3 wires:
+											<li> Power Supply of the motor </li> <li> PWM wire </li> <li> Ground</li> 
+
+										</section>
+									</div>
+	
+							</div>
+						</div>					
 					</section>
 
 				<!-- Two -->

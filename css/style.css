@@ -275,6 +275,14 @@
 				width: 100%;
 			}
 
+			.roundedImage img{
+			    overflow:hidden;
+			    -webkit-border-radius:50px;
+			    -moz-border-radius:50px;
+			    border-radius:110px;
+			    /*width:90px;
+			    height:110px;*/}
+
 /* Icon */
 
 	.icon {
