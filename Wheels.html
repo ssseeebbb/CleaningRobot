@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Mechatronics Project - Sponge System</title>
+		<title>Mechatronics Project - Wheels</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -39,24 +39,15 @@
 							<a href="">Menu</a>
 							<ul>
 								<li><a href="About.html">About</a></li>
-								<li><a href="WaterTank.html">WaterTank</a></li>
+								<li><a href="Brush.html">Brush</a></li>
+								<li><a href="PCB.html">PCB</a></li>
+								<li><a href="Sensors.html">Sensors</a></li>
 								<li><a href="Sponge.html">Sponge</a></li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li class="submenu">
-									<a href="">Submenu</a>
-									<ul>
-										<li><a href="#">Dolore Sed</a></li>
-										<li><a href="#">Consequat</a></li>
-										<li><a href="#">Lorem Magna</a></li>
-										<li><a href="#">Sed Magna</a></li>
-										<li><a href="#">Ipsum Nisl</a></li>
-									</ul>
-								</li>
+								<li><a href="WaterTank.html">WaterTank</a></li>
+								<li><a href="Wheels.html">Wheels</a></li>
 							</ul>
 						</li>
+						<!--<li><a href="#" class="button special">Sign Up</a></li>-->
 					</ul>
 				</nav>
 			</header>
@@ -65,9 +56,9 @@
 			<article id="main">
 
 				<header class="special container">
-					<span class="icon fa-cube"></span>
-					<h2><strong>Sponge System</strong> </h2>
-					<p>Simple and efficient.</p>
+					<span class="icon fa-cab"></span>
+					<h2><strong>Displacement of the robot</strong> </h2>
+					<p>Two wheels, a back support to move the robot on the table..</p>
 				</header>
 					
 				<!-- One -->
@@ -84,10 +75,22 @@
 											<header>
 												<h3>Motor</h3>
 											</header>
-											<p>In order to make turn on it self the round sponge, a basic 2 pins - DC motor is used. As the turning speed is constant, there's no need for a more sophisticate motor.</p>
+											<p>In order to make turn the wheels, a basic 2 pins - DC motor is used. For wheels, we need motor with a slow rotation speed and a high torque. With its 12 volts supply, this motor has a torque 2.5Ncm and a rotation speed of 80RPM.</p>
 											<footer>
 												<ul class="buttons">
 													<li><a href="http://befr.rs-online.com/web/p/dc-geared-motors/2456089/?searchTerm=245+6089&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B337D5B5C732D2F255C2E2C5D5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D323435203630383926" class="button smaal">About the Motor</a></li>
+												</ul>
+											</footer>
+										</section>
+										<section>
+											<a href="#" class="image featured"><img src="images/Wheel.jpg" alt="" /></a>
+											<header>
+												<h3>Wheel</h3>
+											</header>
+											<p>The most important think with a robot working on wet surfaces is to be sure the wheels won't slip. The chosen wheels have a strong steel strucuture to support the weight of the robot and a rubber band outside to avoid slipping.</p>
+											<footer>
+												<ul class="buttons">
+													<li><a href="http://befr.rs-online.com/web/p/tyred-wheels/6949046/?searchTerm=694-9046&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B337D5B5C732D2F255C2E2C5D5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D3639342D3930343626" class="button smaal">About the Motor</a></li>
 												</ul>
 											</footer>
 										</section>
@@ -103,15 +106,14 @@
 												<h3>What function does it fulfill ?</h3>
 											</header>
 
-											<p> Rambo Robot takes off the crumbles of the table but it's not enough to have a clean table.
-											Therefore, Rambo Robot can also clean with a wet sponge by making it turning on itself in the same direction at a constant speed. The choice of making it turning instead of linear movement is supported by first, the fact that it cleans better than with linear movement as there is no direction of cleaning and second, as a motor already has a circular movement, it is easier and cheaper ton implement. </p>
+											<p> For the displacement of the robot, we choose two wheels and a pad? The reason is simple. Thanks to this configuration, the robot is able to turn on itself. Moreover, there are no losses due to gears like on tanks. The only problem is that with two motors, if we want the robot to go straight forward, the microcontroller has to regulate the system. </p>
 
-											<a href="#" class="image featured"><img src="images/SpongeSystem.png" alt="" /></a>
+											<a href="#" class="image featured"><img src="images/Wheels.png" alt="" /></a>
 											<header>
-												<h3>How does it works?</h3>
+												<h3>How do we regulate the system ?</h3>
 											</header>
 											
-											<p>  At the back of the robot, a sponge system is installed. It consists of a DC motor connected by a shaft to a round cylinder support (the green and grey part on the figure above) for the sponge to fit in (the sponge is not drawed on the figure though one can easily imagine it at the bottom sticked in the grey support). </p>
+											<p> Regulate the displacement of the robot can be very complex and we choose to simplify it as much as possible. The first thing was to add some rotary controllers to know the angular position of the wheels. Then we had a choice to make: position regulation of velocity regulation. Given that we want to clean the table randomly we don't need to know exactly where the robot is. That's why we choose a simple velocity regulation with a proportionnal controller.</p>
 											
 											<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 											<header>
@@ -129,18 +131,18 @@
 					</section>
 
 				<!-- Two -->
-					<section class="wrapper style1 container special">
+	<section class="wrapper style1 container special">
 						<div class="row">
 							<div class="4u">
 							
 								<section>
 									<header>
-										<h3>This is Something</h3>
+										<h3>Computer Aided Design Software</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p>To build this project, we had to be able to design our robot on the computer. The aim of that is to know the exact dimensions of our pieces and notice before starting the construction that things would go wrong. The program we used was <strong>INVENTOR</strong>.</p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="#" class="button small">Learn More</a></li>
+											<li><a href="http://www.autodesk.com/products/inventor/overview" class="button small">Learn More</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -150,12 +152,12 @@
 							
 								<section>
 									<header>
-										<h3>Also Something</h3>
+										<h3>FabLab</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p>When the design on computer was done, we had to build the robot. Few years ago, the robots could be made thanks to different techniques : turning, milling, drilling. Today, the technology evolved and we used for this project laser cutting to cut our plates of plexi and 3D printing for complex pieces. The machinery was available for us at the <strong>FabLab</strong></p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="#" class="button small">Learn More</a></li>
+											<li><a href="http://www.fablab-brussels.be" class="button small">Learn More</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -165,12 +167,12 @@
 							
 								<section>
 									<header>
-										<h3>Probably Something</h3>
+										<h3>Eagle</h3>
 									</header>
-									<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+									<p>The PCB is an important part of the project. It enables to connect the microcontroller with ll the different parts of the project. The creation of it requires to be precise on the band width and the place of everything. To do it, we used a program, which gather a lot of electrical components to build those boards, called <strong>Eagle</strong></p>
 									<footer>
 										<ul class="buttons">
-											<li><a href="#" class="button small">Learn More</a></li>
+											<li><a href="http://www.cadsoftusa.com" class="button small">Learn More</a></li>
 										</ul>
 									</footer>
 								</section>
@@ -184,16 +186,10 @@
 		<!-- Footer -->
 			<footer id="footer">
 			
-				<ul class="icons">
-					<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
-					<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-				</ul>
+
 				
 				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>&copy; Rambo Team</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
 			
 			</footer>
