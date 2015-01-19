@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Mechatronics Project - Sponge System</title>
+		<title>Mechatronics Project - Arduino code</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -58,9 +58,9 @@
 			<article id="main">
 
 				<header class="special container">
-					<span class="icon fa-cube"></span>
-					<h2><strong>Sponge System</strong> </h2>
-					<p>Simple and efficient.</p>
+					<span class="icon fa-align-left"></span>
+					<h2><strong>Arduino code</strong> </h2>
+					<p>The code that brings Rambo to life!</p>
 				</header>
 					
 				<!-- One -->
@@ -73,16 +73,65 @@
 									<div class="sidebar">
 
 										<section>
-											<a href="#" class="image featured"><img src="images/SpongeMotor.jpg" alt="" /></a>
 											<header>
-												<h3>Motor</h3>
+												<h3>Initialisation</h3>
 											</header>
-											<p>In order to make turn on it self the round sponge, a basic 2 pins - DC motor is used. As the turning speed is constant, there's no need for a more sophisticate motor.</p>
-											<footer>
-												<ul class="buttons">
-													<li><a href="http://befr.rs-online.com/web/p/dc-geared-motors/2456089/?searchTerm=245+6089&relevancy-data=636F3D3126696E3D4931384E525353746F636B4E756D6265724D504E266C753D656E266D6D3D6D61746368616C6C26706D3D5E5C647B337D5B5C732D2F255C2E2C5D5C647B332C347D2426706F3D313426736E3D592673743D52535F53544F434B5F4E554D4245522677633D4E4F4E45267573743D323435203630383926" class="button smaal">About the Motor</a></li>
-												</ul>
-											</footer>
+											<p>Assigning the different variables and pins of the arduino.</p>
+<br><br><br><br><br><br><br><br><br>
+										</section>
+
+										<section>
+											<header>
+												<h3>Driving</h3>
+											</header>
+											<p> This part regulates the voltage to the H-bridge controller, it also reads the values of the encoders to regulate the motors such that both turn at the same speed. For this the angle difference between the two motors is used, if they have the same angle it is assumed they drive at the same speed.</p>
+										</section>
+<br><br>
+										<section>
+											<header>
+												<h3>Stopping</h3>
+											</header>
+											<p> This function stops the motors. </p>
+										</section>
+
+										<section>
+											<header>
+												<h3>Turning</h3>
+											</header>
+											<p> When the robot detects an edge of the table, this function makes the robot turn around. The function reads the current angle and makes the wheels turn (in opposite direction) as long as one of the two wheels as not turned for 180 degrees. </p>
+										</section>
+
+										<section>
+											<header>
+												<h3>Encoders</h3>
+											</header>
+											<p> This function reads the values of the encoders as a certain voltage and returns them as an angle in degrees. </p>
+										</section>
+<br><br><br><br><br><br><br>
+										<section>
+											<header>
+												<h3>Brushless motor</h3>
+											</header>
+											<p> The brushless motor requires an initialisation. </p>
+										</section>
+<br>
+										<section>
+											<header>
+												<h3>Initialisation loop</h3>
+											</header>
+										</section>
+<br><br><br><br><br><br><br><br><br>
+										<section>
+											<header>
+												<h3>Infrared sensor</h3>
+											</header>
+											<p>Reading the values of the infrared sensor. These values are read during a certain time and averaged to make sure that noise or other wrong peak values make the robot turn around.</p>
+											<p> When not at an edge, so small values of the IR sensor, the robot drives straight with the function advance. At the same time also the brushless motor is controlled using the setSpeed function. </p>
+											<p> If the value is larger than 120, which is a experimentally obtained value, the robot is at the edge of the table. In this case the robot is stopped and turns around.   </p>
+
+											<ul class="buttons vertical" width=10%>
+												<li><a href="https://dl.dropboxusercontent.com/u/52776729/Total_Regulation.ino" class="button fit scrolly">Download the code here</a></li>
+											</ul>
 										</section>
 									</div>
 
@@ -92,21 +141,17 @@
 								<!-- Content -->
 									<div class="content">
 										<section>
-											<header>
-												<h3>What function does it fulfill ?</h3>
-											</header>
-
-											<p> Rambo Robot takes off the crumbles of the table but it's not enough to have a clean table.
-											Therefore, Rambo Robot can also clean with a wet sponge by making it turning on itself in the same direction at a constant speed. The choice of making it turning instead of linear movement is supported by first, the fact that it cleans better than with linear movement as there is no direction of cleaning and second, as a motor already has a circular movement, it is easier and cheaper ton implement. </p>
-
-											<a href="#" class="image featured"><img src="images/SpongeSystem.png" alt="" /></a>
-											<header>
-												<h3>How does it work?</h3>
-											</header>
-											
-											<p>  At the back of the robot, a sponge system is installed. It consists of a DC motor connected by a shaft to a round cylinder support (the green and grey part on the figure above) for the sponge to fit in (the sponge is not drawed on the figure though one can easily imagine it at the bottom sticked in the grey support). </p>
-											
-											<p> The Dc-motor of the sponge system is the same 12V DC motor as for the wheels. This motor howerver does not need any specific control except turning and stop turning.</p>
+											<a class="image featured"><img src="images/Code_part1.png" alt="" /></a>
+<br>
+											<a class="image featured"><img src="images/Code_part2.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part3.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part4.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part5.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part6.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part7.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part8.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part9.png" alt="" /></a>
+											<a class="image featured"><img src="images/Code_part10.png" alt="" /></a>
 										</section>
 									</div>
 	

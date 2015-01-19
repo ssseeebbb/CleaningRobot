@@ -45,6 +45,8 @@
 								<li><a href="Sponge.html">Sponge</a></li>
 								<li><a href="WaterTank.html">WaterTank</a></li>
 								<li><a href="Wheels.html">Wheels</a></li>
+								<li><a href="Arduino.html">Arduino code</a></li>
+								<li><a href="Problems.html">Problems</a></li>
 							</ul>
 						</li>
 						<!--<li><a href="#" class="button special">Sign Up</a></li>-->
@@ -94,6 +96,18 @@
 												</ul>
 											</footer>
 										</section>
+										<section>
+										<a class="image featured"><img src="images/L298n.png" alt="" /></a>
+											<header>
+												<h3> DC-Controller </h3>
+											</header>
+											<p> The L298n controller used for the motors, this one is shown in the figure above. <p>
+											<footer>
+												<ul class="buttons">
+													<li><a href="http://nl.rs-online.com/web/p/motor-driver-ics/7147711/" class="button small">About the Controller</a></li>
+												</ul>
+											</footer>	
+										</section>
 									</div>
 
 							</div>
@@ -106,22 +120,24 @@
 												<h3>What function does it fulfill ?</h3>
 											</header>
 
-											<p> For the displacement of the robot, we choose two wheels and a pad? The reason is simple. Thanks to this configuration, the robot is able to turn on itself. Moreover, there are no losses due to gears like on tanks. The only problem is that with two motors, if we want the robot to go straight forward, the microcontroller has to regulate the system. </p>
+											<p> For the displacement of the robot, we choose two wheels and the sponge as support. The reason is simple. Thanks to this configuration, the robot is able to turn on itself. Moreover, there are no losses due to gears like on tanks. The only problem is that with two motors, if we want the robot to go straight forward, the controller has to regulate the system. </p>
 
 											<a href="#" class="image featured"><img src="images/Wheels.png" alt="" /></a>
 											<header>
 												<h3>How do we regulate the system ?</h3>
 											</header>
 											
-											<p> Regulate the displacement of the robot can be very complex and we choose to simplify it as much as possible. The first thing was to add some rotary controllers to know the angular position of the wheels. Then we had a choice to make: position regulation of velocity regulation. Given that we want to clean the table randomly we don't need to know exactly where the robot is. That's why we choose a simple velocity regulation with a proportionnal controller.</p>
-											
-											<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+											<p> The Regulation of the displacement of the robot can be very complex and we choose to simplify it as much as possible. The first thing was to add some rotary controllers to know the angular position of the wheels. Then we had a choice to make: position regulation or velocity regulation. Given that we want to clean the table randomly we don't need to know exactly where the robot is. That's why we choose a simple velocity regulation.</p>
+<br><br><br><br><br><br>
 											<header>
-												<h3>PCB </h3>
+												<h3>DC-controller</h3>
 											</header>
-											<p> The PCB part of the DC motor is shown on the figure above. <p>
 
-											It is drived by only 2 wires. One power supply (1.5V - 3V) and one PWM input to control the speed of the rotating sponge.
+											<p> The motor is driven by controller because the commutation is not automatic for these kind of DC motor.</p>
+											The motor is connected with 3 wires to the controller:
+											<li> Power Supply </li> <li> Control wire </li> <li> Ground</li> 
+
+						
 
 										</section>
 									</div>
@@ -141,6 +157,9 @@
 									</header>
 									<p>To build this project, we had to be able to design our robot on the computer. The aim of that is to know the exact dimensions of our pieces and notice before starting the construction that things would go wrong. The program we used was <strong>INVENTOR</strong>.</p>
 									<footer>
+										<ul class="buttons">
+											<li><a href="https://dl.dropboxusercontent.com/u/52776729/Inventor.zip" class="button small">Download files</a></li>
+										</ul>
 										<ul class="buttons">
 											<li><a href="http://www.autodesk.com/products/inventor/overview" class="button small">Learn More</a></li>
 										</ul>
